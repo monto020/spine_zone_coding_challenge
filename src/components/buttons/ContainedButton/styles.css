@@ -1,0 +1,15 @@
+.ContainedButton {
+    background-color: "#469DE3";
+    text-align: "left";
+    height: 40px;
+    width: 152px;
+    border-width: 1;
+    border-radius: 3; /* This was 8 in Figma, but didn't look right*/
+}
+
+@media only screen and (max-width: 375px) {
+    .nextButton {
+        height: 40px;
+        width: 120px;
+    }
+}

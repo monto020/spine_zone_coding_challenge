@@ -1,0 +1,19 @@
+.SliderBottomLabel {
+    font-family: "Open Sans";
+    font-size: 16px;
+ 
+}
+
+.Icon {
+    align-self: 'center';
+}
+
+
+.Div2 {
+    width: 500px;
+
+    flex-direction: 'row';
+    justify-content: 'space-around';
+    background-color: 'green';
+    align-self: 'center';
+}

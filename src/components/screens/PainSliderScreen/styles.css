@@ -1,0 +1,22 @@
+.SliderGrid {
+    background-color: "#E5E5E5";
+    height: 1024px;
+}
+
+@media only screen and (max-width: 1194px) {
+    .SliderGrid {
+        height: 834px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .SliderGrid {
+        height: 1024px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .SliderGrid {
+        height: 667px;
+    }
+}

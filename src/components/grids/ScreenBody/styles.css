@@ -1,0 +1,11 @@
+.ChildSliderGrid {
+    background-color: pink;
+    height: 864px;
+    padding-top: 50px;
+    display: 'flex';
+    flex-direction: 'column';
+}
+
+.CustomerQuestionText{
+    font-size: 20px;
+}

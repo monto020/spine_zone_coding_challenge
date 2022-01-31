@@ -1,0 +1,32 @@
+.gridRowstyle {
+    align-items: "center";
+    text-align: "center";
+    justify-content: 'center';
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 1366px;
+    height: 80px;
+}
+
+@media only screen and (max-width: 1194px) {
+    .gridRowstyle {
+        width: 1194px;
+        height: 72px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .gridRowstyle {
+        width: 768px;
+        height: 72px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .gridRowstyle {
+        width: 375px;
+        height: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
