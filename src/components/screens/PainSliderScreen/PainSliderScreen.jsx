@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 
 import ScreenHeader from '../../grids/ScreenHeader';
 import ScreenBody from '../../grids/ScreenBody';
@@ -12,7 +11,7 @@ import './styles.css';
  */
 const PainSliderScreen = () => (
     <Grid
-        className={'SliderGrid'}
+        className='SliderGrid'
         justifyContent='center'
         container
     >

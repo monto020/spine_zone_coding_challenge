@@ -1,22 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from '@mui/material/Slider';
 
-import { isPainSliderValueSelected$ } from '../../../observables/PainSliderObservables';
+import { painValue$ } from '../../../observables/PainSliderObservables';
 import { withStyles } from "@material-ui/core/styles";
 import './styles.css'
 
 //Overriding theme 
 const CustomSlider = withStyles({
   root: {
-    height: 10
+    height: '10px',
+
+    // eslint-disable-next-line no-useless-computed-key
+    ['@media (max-width:768px)']: {
+      height: '8px'
+    }
   },
   rail: {
-    backgroundImage: "linear-gradient(.25turn, #68C358, #FFAB00, #FF446C)"
+    //TODO Copied colors in from FIGMA, but they didn't show up as bright as the design, need to revisit. 
+    backgroundImage: "linear-gradient(to right, #68C358CC, #FFAB00CC, #FF446CCC)"
   },
 
   track: {
     borderWidth: 0, // A border exists by default, so set width to 0.
-    backgroundColor: 'transparent',
+    backgroundColor: 'transparent'
   },
 
   thumb: {
@@ -25,7 +31,7 @@ const CustomSlider = withStyles({
     width: '40px',
 
     '&:active': {
-      backgroundColor: '#3795e1',
+      backgroundColor: '#469DE3'
     },
 
     // eslint-disable-next-line no-useless-computed-key
@@ -41,26 +47,17 @@ const CustomSlider = withStyles({
  * The slider for the customer to input the level of pain
  */
 const PainSlider = () => {
-  //TODO define functionality for sliderValue. It's currently set, 
-  //but didn't see anywhere to display it in the FIGMA design.
-  const [sliderValue, setSliderValue] = useState();
 
   return (
-    <div style={{
-      display: 'flex',
-      alignSelf: 'center',
-      width: '95%',
-    }}>
+    <div className='SliderContainer'>
       <CustomSlider
         className='slider'
         defaultValue={0}
         step={1}
         min={0}
         max={10}
-        aria-label="Always visible"
-        onChange={(value) => {
-          setSliderValue(value);
-          isPainSliderValueSelected$.next(true);
+        onChange={(event, value) => {
+          painValue$.next(value);
         }}
       />
     </div>

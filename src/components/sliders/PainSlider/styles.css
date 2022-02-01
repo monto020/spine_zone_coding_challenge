@@ -1,5 +1,6 @@
-.DivListItemInner {
-    background-color: orange;
-    align-self: 'center';
-
+.SliderContainer{
+    display: 'flex';
+    width: 95%;
+    justify-content: 'center';
+    align-items: 'center';
 }

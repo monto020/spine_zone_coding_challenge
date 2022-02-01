@@ -1,31 +1,47 @@
 .SliderTopLabelNumbersList {
-    flex-direction: "row";
-    background-color: "cyan";
+    display: flex;
+    flex-direction: row;
+}
+
+.PainValueContainer {
+    margin-top: 10px;
 }
 
 .PainLevelText {
-    text-align: "center";
+    text-align: center;
     padding: 0;
-    font-size: 16px;
-     
-
-    font-weight: bold;
+    font-size: 12px !important;
+    font-weight: 500 !important;
 }
 
+.PainValueText {
+    text-align: center;
+    font-size: 20px !important;
+}
+/*
 @media only screen and (max-width: 1194px) {
     .PainLevelText {
-        font-size: 14px;
+     font-size: 12px;
     }
 }
+*/
 
 @media only screen and (max-width: 768px) {
     .PainLevelText {
-        font-size: 12px;
+        font-size: 10px !important;
+    }
+
+    .PainValueText {
+        font-size: 16px !important;
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 429px) {
     .PainLevelText {
-        font-size: 10px;
+        font-size: 8px !important;
+    }
+
+    .PainValueText {
+        font-size: 12px !important;
     }
 }

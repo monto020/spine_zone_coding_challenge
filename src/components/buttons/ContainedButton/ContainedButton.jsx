@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import './styles.css';
 
 /**
- * Button for exiting the questionare. 
+ * Flat color button includes label and condition to disable. 
  */
 const ContainedButton = ({ title, isDisabled, onClick }) => (
     <Button
@@ -13,7 +13,7 @@ const ContainedButton = ({ title, isDisabled, onClick }) => (
         disableElevation
         disabled={isDisabled}
         onClick={onClick}
-        className={'ContainedButton'}>
+        className='ContainedButton'>
         {title}
     </Button>
 );

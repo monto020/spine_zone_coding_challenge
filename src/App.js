@@ -4,7 +4,7 @@ import PainSliderScreen from './components/screens/PainSliderScreen';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
         <PainSliderScreen />
     </div>
   );

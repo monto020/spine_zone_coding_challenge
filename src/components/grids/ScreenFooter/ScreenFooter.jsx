@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Button from '@mui/material/Button';
 
-import { isPainSliderValueSelected$ } from '../../../observables/PainSliderObservables';
+import { painValue$ } from '../../../observables/PainSliderObservables';
+import BackButton from '../../buttons/BackButton';
 import ContainedButton from '../../buttons/ContainedButton';
 import './styles.css';
 
@@ -11,52 +10,37 @@ import './styles.css';
  * Footer for screens, includes a back and a next button.
  */
 const ScreenFooter = () => {
-    const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
+    const [painValue, setPainValue] = useState(null);
 
     useEffect(() => {
-        const isPainValueSelectedSubscription = isPainSliderValueSelected$.subscribe((selected) => {
-            setIsNextButtonDisabled(!selected);
+        const painValueSubscription = painValue$.subscribe((value) => {
+            //TODO define what to do with pain value once set. 
+            //For now, just display it, to prove slider is working.
+            console.log(`value: ${value}`);
+            setPainValue(value);
         });
 
         return () => {
-            isPainValueSelectedSubscription.unsubscribe();
+            painValueSubscription.unsubscribe();
         };
     }, []);
 
     return (
         <Grid
-            className='gridRowstyle'
-            sx={{ alignSelf: 'flex-end' }}
+            className='ScreenFooter'
             container
             direction='row'
             justifyContent='space-between'
         >
-            <Button variant="contained"
+            <BackButton
                 onClick={() => {
                     //TODO Define what behavior this particular instance of the button click must have.
-                    //For now, using back button to set disable button again.
-                    isPainSliderValueSelected$.next(false);
+                    console.log('Back Button Pressed');
                 }}
-                disableElevation
-                sx={[
-                    {
-                        ':hover': {
-                            backgroundColor: 'transparent',
-                            color: '#999999'
-                        }
-                    },
-                    {
-                        height: 48,
-                        backgroundColor: 'transparent',
-                        color: 'black',
-                        padding: 0
-                    }]}
-                startIcon={<ArrowBackIcon />}>
-                BACK
-            </Button>
+            />
             <ContainedButton
                 title={'NEXT'}
-                isDisabled={isNextButtonDisabled}
+                isDisabled={painValue === null}
                 onClick={() => {
                     //TODO Define what behavior this particular instance of the button click must have.
                     console.log('Next Button Pressed');

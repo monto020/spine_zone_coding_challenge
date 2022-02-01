@@ -1,0 +1,11 @@
+.BackButton {
+    height: 48px;
+    background-color: white !important;
+    color: #454545 !important;
+    padding: 0;
+}
+
+.BackButton:hover {
+    background-color: white !important;
+    color: #999999 !important;
+}

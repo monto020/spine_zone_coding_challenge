@@ -13,9 +13,8 @@ const ScreenHeader = ({ title }) => {
 
     return (
         <Grid
-            className={'gridRowstyle'}
+            className='ScreenHeader'
             container
-            sx={{ backgroundColor: '#3795e1' }}
             direction='row'
             justifyContent='space-between'
             alignContent='center'

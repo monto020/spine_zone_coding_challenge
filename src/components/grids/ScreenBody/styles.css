@@ -1,11 +1,30 @@
 .ChildSliderGrid {
-    background-color: pink;
     height: 864px;
-    padding-top: 50px;
-    display: 'flex';
-    flex-direction: 'column';
+    padding-top: 55px;
+    display: "flex";
+    align-items: "center" !important;
+    justify-content: "center" !important;
+    flex-direction: "column";
 }
 
-.CustomerQuestionText{
-    font-size: 20px;
+.PageQuestionTitle {
+    margin-bottom: 44px;
+}
+
+@media only screen and (max-width: 1194px) {
+    .ChildSliderGrid {
+        height: 690px; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ChildSliderGrid {
+        height: 880px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .ChildSliderGrid {
+        height: 652px;
+    }
 }

@@ -8,7 +8,7 @@ import './styles.css';
  * The title in the screen header.
  */
 const HeaderTitle = ({ title }) => (
-    <Typography className={'HeaderTitle'}>{title}</Typography>
+    <Typography className='HeaderTitle'>{title}</Typography>
 );
 
 

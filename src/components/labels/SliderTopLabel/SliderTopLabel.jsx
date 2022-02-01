@@ -1,5 +1,4 @@
 import React from 'react';
-import isEmpty from 'lodash/isEmpty';
 import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -15,6 +14,7 @@ const labels = [
         value: 0
     },
     {
+        painLevel: '',
         value: 1
     },
     {
@@ -22,6 +22,7 @@ const labels = [
         value: 2
     },
     {
+        painLevel: '',
         value: 3
     },
     {
@@ -29,6 +30,7 @@ const labels = [
         value: 4
     },
     {
+        painLevel: '',
         value: 5
     },
     {
@@ -36,6 +38,7 @@ const labels = [
         value: 6
     },
     {
+        painLevel: '',
         value: 7
     },
     {
@@ -43,6 +46,7 @@ const labels = [
         value: 8
     },
     {
+        painLevel: '',
         value: 9
     },
     {
@@ -57,90 +61,37 @@ const labels = [
 const SliderTopLabel = () => {
 
     return (
-        <div style={{
-            height: '120px',
-            width: '100%',
-            backgroundColor: 'blue',
-            marginTop: '20px',
-            marginBottom: '20px'
-        }}>
-            <List
-                className='SliderTopLabelNumbersList'
-                style={{
-                    display: 'flex',
-                    backgroundColor: 'orange'
-                }}
-            >
-                {
-                    labels.map((item, index) =>
-                        <>
-                            <ListItem
-                                key={index}
-                                style={{
-                                    padding: '0px',
-                                    alignItems: 'flex-end',
-                                    backgroundColor: 'green',
-                                }}
-                            >
-                                <ListItemText
-                                    primary={
-                                        !isEmpty(item.painLevel) && <Typography
-                                            sx={{
-                                                textAlign: 'center',
-                                                fontSize: '10px'
-                                            }}
-                                            className='PainLevelText'>
-                                            {item.painLevel}
-                                        </Typography>
-                                    }
-                                    secondary={
-                                        <Typography
-                                            sx={{
-                                                //  alignSelf: 'center',
-                                                textAlign: 'center',
-                                                padding: 0,
-                                                //  backgroundColor: 'red',
-                                                fontSize: '10px',
-                                            }}>{item.value}</Typography>
-                                    }
-
-                                />
-                            </ListItem>
-                        </>
-                    )
-                }
-            </List>
-            <List
-                className='SliderTopLabelNumbersList'
-                style={{
-                    display: 'flex',
-                    backgroundColor: 'yellow'
-                }}
-            >
-                {
-                    labels.map((item, index) =>
-
+        <List className='SliderTopLabelNumbersList'>
+            {
+                labels.map((item, index) =>
+                    <>
                         <ListItem
                             key={index}
                             style={{
-                                padding: '0px',
-                                // alignItems: 'space-around',
-                                backgroundColor: 'green',
+                                padding: 0,
+                                margin: 0,
+                                alignItems: 'flex-end',
+                            //    backgroundColor: 'green',
                             }}
                         >
-                            <div style={{
-                                height: '25px',
-                                width: 10,
-                                alignSelf: 'center'
-
-                            }}>
-                                <Divider orientation={'vertical'} />
-                            </div>
+                            <ListItemText
+                                primary={
+                                    <Typography noWrap className='PainLevelText'>
+                                        {item.painLevel}
+                                    </Typography>
+                                }
+                                secondary={
+                                    <div className='PainValueContainer'>
+                                        <Typography className='PainValueText'>
+                                            {item.value}</Typography>
+                                    </div>
+                                }
+                            />
                         </ListItem>
-                    )
-                }
-            </List>
-        </div >
+                    </>
+                )
+            }
+        </List>
     );
 };
 

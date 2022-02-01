@@ -1,19 +1,36 @@
 .SliderBottomLabel {
     font-family: "Open Sans";
-    font-size: 16px;
- 
+    font-size: 12px !important;
+    /* 
+    Margins were different in FIGMA, ask designers if this was intended.
+    Going with consistency for now
+    */
+    margin-left: 20px !important;
+    margin-right: 20px !important;
 }
 
-.Icon {
-    align-self: 'center';
+.ArrowIcon {
+    align-self: center;
+    font-size: 12px !important;
+}
+@media only screen and (max-width: 768px) {
+    .SliderBottomLabel {
+        margin-left: 21px !important;
+        margin-right: 21px !important;
+    }
+
+    .SliderBottomLabel {
+        font-size: 10px !important;
+    }
+
+    .ArrowIcon {
+        font-size: 10px !important;
+    }
 }
 
-
-.Div2 {
-    width: 500px;
-
-    flex-direction: 'row';
-    justify-content: 'space-around';
-    background-color: 'green';
-    align-self: 'center';
+@media only screen and (max-width: 768px) {
+    .SliderBottomLabel {
+        margin-left: 9px !important;
+        margin-right: 9px !important;
+    }
 }

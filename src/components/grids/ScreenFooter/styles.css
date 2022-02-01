@@ -1,32 +1,29 @@
-.gridRowstyle {
-    align-items: "center";
-    text-align: "center";
-    justify-content: 'center';
-    padding-left: 50px;
-    padding-right: 50px;
+.ScreenFooter {
+    align-self: flex-end;
+    align-items: flex-end;
+    padding: 0px 70px 50px 68px;
     width: 1366px;
     height: 80px;
 }
 
 @media only screen and (max-width: 1194px) {
-    .gridRowstyle {
+    .ScreenFooter {
         width: 1194px;
         height: 72px;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .gridRowstyle {
+    .ScreenFooter {
         width: 768px;
         height: 72px;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .gridRowstyle {
+    .ScreenFooter {
         width: 375px;
         height: 80px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0px 24px 64px 21px;
     }
 }

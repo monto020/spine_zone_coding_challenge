@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+
+import PageQuestionTitle from '../../labels/PageQuestionTitle';
 import PainSlider from '../../sliders/PainSlider';
 import SliderTopLabel from '../../labels/SliderTopLabel';
 import SliderBottomLabel from '../../labels/SliderBottomLabel';
@@ -12,21 +13,20 @@ import './styles.css';
 const ScreenBody = () => {
 
     return (
-        <Grid item xs={8}
-            sx={{ display: 'flex', flexDirection: 'column' }}
-            className='ChildSliderGrid'
-        >
-            <div>
-                <Typography
-                    sx={{ fontSize: '20px' }}
-                    classes={{ root: 'CustomerQuestionText' }}
-                    className={'CustomerQuestionText'}
-                    align="left">
-                    {'Lorem ipsum dolor sit amet, consectetur adipiscing elit? '}
-                </Typography>
+        <Grid item xs={8} className='ChildSliderGrid'>
+            <div className='PageQuestionTitle'>
+                <PageQuestionTitle
+                    title={'Lorem ipsum dolor sit amet, consectetur adipiscing elit? '}
+                />
             </div>
             <SliderTopLabel />
-            <PainSlider />
+            <Grid
+                container
+                direction='row'
+                justifyContent='center'
+            >
+                <PainSlider />
+            </Grid>
             <Grid
                 container
                 direction='row'
@@ -34,7 +34,7 @@ const ScreenBody = () => {
             >
                 <SliderBottomLabel />
             </Grid>
-        </Grid>
+        </Grid >
     );
 };
 

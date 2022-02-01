@@ -12,12 +12,11 @@ const SliderBottomLabel = () => {
 
     return (
         <>
-            < ArrowBackIcon fontSize='xs' sx={{ alignSelf: 'center', marginRight: '5px' }} />
-            < Typography
-                classes={{ root: 'SliderBottomLabel' }}>
+            <ArrowBackIcon className='ArrowIcon' />
+            <Typography className='SliderBottomLabel'>
                 {'Move the slider right or left'}
             </Typography >
-            <ArrowForwardIcon fontSize='xs' sx={{ alignSelf: 'center', marginLeft: '5px' }} />
+            <ArrowForwardIcon className='ArrowIcon' />
         </>
     );
 };

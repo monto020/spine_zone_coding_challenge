@@ -1,27 +1,29 @@
-.gridRowstyle {
-
+.ScreenHeader {
+    background-color: #469DE3;
+    padding: 0px 63px 0px 70px;
 }
 
 @media only screen and (max-width: 1194px) {
-    .gridRowstyle {
+    .ScreenHeader {
         width: 1194px;
         height: 72px;
-    }
+        padding-right: 44.04px;
+    }  
 }
 
 @media only screen and (max-width: 768px) {
-    .gridRowstyle {
+    .ScreenHeader {
         width: 768px;
         height: 72px;
+        padding-right: 66px;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .gridRowstyle {
+    .ScreenHeader {
         width: 375px;
         height: 80px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0px 19px 0px 20px;
     }
 
     .nextButton {

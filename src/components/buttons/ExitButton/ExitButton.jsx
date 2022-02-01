@@ -10,7 +10,7 @@ import './styles.css';
  */
 const ExitButton = ({ onClick }) => (
     <IconButton
-        sx={{ color: 'white'}}
+        classes={{ root: 'ExitButton' }}
         onClick={onClick}
     >
         <CloseIcon />

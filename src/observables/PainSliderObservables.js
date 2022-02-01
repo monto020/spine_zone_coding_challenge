@@ -1,4 +1,4 @@
 import { BehaviorSubject } from 'rxjs';
 
 
-export const isPainSliderValueSelected$ = new BehaviorSubject(false);
+export const painValue$ = new BehaviorSubject(null);
