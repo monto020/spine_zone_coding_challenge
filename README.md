@@ -20,4 +20,5 @@ I used a single observable to track whether or not the slider has had a value se
 ### Improvements to make: 
 1. Check in with designers to see if mismatched margins/padding is intentional and update. 
 2. Make use of theme provider, and use style objects instead of css file. 
+3. Improve slider area, divider and values styling.
 

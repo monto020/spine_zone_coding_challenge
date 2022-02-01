@@ -1,10 +1,21 @@
 .SliderTopLabelNumbersList {
     display: flex;
     flex-direction: row;
+    padding: 0 !important;
 }
 
-.PainValueContainer {
-    margin-top: 10px;
+.ListItemContainer {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ListItemTextContainer {
+    margin: 0;
+    padding: 0 !important;
+    align-items: flex-end;
 }
 
 .PainLevelText {
@@ -15,16 +26,21 @@
 }
 
 .PainValueText {
+    padding: 0 !important;
+    margin-top: 17px;
     text-align: center;
     font-size: 20px !important;
 }
-/*
-@media only screen and (max-width: 1194px) {
-    .PainLevelText {
-     font-size: 12px;
-    }
+
+.ListItemDividerContainer {
+    padding: 0 !important;
+    justify-content: center !important;
 }
-*/
+
+.DividerContainer {
+    color: #00000033;
+    height: 24px !important;
+}
 
 @media only screen and (max-width: 768px) {
     .PainLevelText {

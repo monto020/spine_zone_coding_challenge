@@ -64,16 +64,8 @@ const SliderTopLabel = () => {
         <List className='SliderTopLabelNumbersList'>
             {
                 labels.map((item, index) =>
-                    <>
-                        <ListItem
-                            key={index}
-                            style={{
-                                padding: 0,
-                                margin: 0,
-                                alignItems: 'flex-end',
-                            //    backgroundColor: 'green',
-                            }}
-                        >
+                    <div key={index} className='ListItemContainer'>
+                        <ListItem classes={{ root: 'ListItemTextContainer' }}>
                             <ListItemText
                                 primary={
                                     <Typography noWrap className='PainLevelText'>
@@ -81,17 +73,20 @@ const SliderTopLabel = () => {
                                     </Typography>
                                 }
                                 secondary={
-                                    <div className='PainValueContainer'>
-                                        <Typography className='PainValueText'>
-                                            {item.value}</Typography>
-                                    </div>
+                                    <Typography component={'div'} className='PainValueText'>
+                                        {item.value}
+                                    </Typography>
                                 }
                             />
                         </ListItem>
-                    </>
+                        <ListItem
+                            classes={{ root: 'ListItemDividerContainer' }}>
+                            <Divider className='DividerContainer' orientation={'vertical'} />
+                        </ListItem>
+                    </div>
                 )
             }
-        </List>
+        </List >
     );
 };
 

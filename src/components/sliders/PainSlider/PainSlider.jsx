@@ -8,7 +8,7 @@ import './styles.css'
 //Overriding theme 
 const CustomSlider = withStyles({
   root: {
-    height: '10px',
+    height: '1px',
 
     // eslint-disable-next-line no-useless-computed-key
     ['@media (max-width:768px)']: {
@@ -17,7 +17,8 @@ const CustomSlider = withStyles({
   },
   rail: {
     backgroundImage: "linear-gradient(to right, #68C358CC, #FFAB00CC, #FF446CCC)",
-    opacity: 1.0
+    opacity: 1.0,
+    height: '10px'
   },
 
   track: {
