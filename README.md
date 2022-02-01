@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Getting Started with SpineZone Challenge Slider App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### To Setup project:
+Precondition: User must have npm installed. 
+1. clone from https://github.com/monto020/spine_zone_coding_challenge.git
+2. run `npm install` command. 
+3. run `npm start` command. 
 
-## Available Scripts
+### Project was tested usig Chrome developer tools 
+### Considerations for this project:
+Broke up screen into 3 parts. Header, Body, and Footer. This allows for reusability of components on different screens. The Header includes a title and an exit button. The footer includes a back and next button. The next button is disabled and will have different onClick behavior based on what's passed into that component. 
 
-In the project directory, you can run:
+Reusablity was again the focus. Wherever possible, I made components general, with general props to be passed in as well. I did notice some mismatches in margins in the FIGMA file, also font of Open Sans, didn't look like the FIGMA file. In cases where I saw some differences, I went with what I thought would look better and more consistent. the next step would be to reach out to designers to see what was intended and investigate further though. 
 
-### `npm start`
+For the buttons, and slider value I didn't see any expected behavior. So in this case, I output the clicks and slider value to console, was able to test the components this way. The desired behavior can be added . 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Improvements to make: 
+1. Check in with designers to see if mismatched margins/padding is intentional and update. 
+2. Figure out why slider colors look so muted, when hex color was copied from FIGMA. 
+3. Make use of theme provider, and use style objects instead of css file. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
