@@ -16,8 +16,8 @@ const CustomSlider = withStyles({
     }
   },
   rail: {
-    //TODO Copied colors in from FIGMA, but they didn't show up as bright as the design, need to revisit. 
-    backgroundImage: "linear-gradient(to right, #68C358CC, #FFAB00CC, #FF446CCC)"
+    backgroundImage: "linear-gradient(to right, #68C358CC, #FFAB00CC, #FF446CCC)",
+    opacity: 1.0
   },
 
   track: {
